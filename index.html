@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .item1 {
+      grid-area: header;
+    }
+  
+    .item3 {
+      grid-area: left;
+    }
+  
+    .item4 {
+      grid-area: right;
+    }
+  
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'header header'
+        'left right';
+      grid-gap: 10px;
+      background-color: #352f5b;
+      padding: 10px;
+    }
+  
+    .grid-container>div {
+      background-color:#352f5b;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 15px;
+    }
+  </style>
+  <title>Prioritize</title>
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <div class="item1">
+      <h1>Prioritize</h1>
+    </div>
+    <div class="item3">
+      <div class="container">
+        <header class="text-center text-light my-4">
+          <!--<h1 class="mb-4">Prioritize.</h1>-->
+          <form class="search">
+            <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+          </form>
+        </header>
+      
+        <ul class="list-group todos mx-auto text-light">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>play mariokart</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>defeat ganon in zelda</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>make a veggie pie</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+        </ul>
+      
+        <form class="add text-center my-4">
+          <label class="text-light">Add a new todo...</label>
+          <input class="form-control m-auto" type="text" name="add" />
+        </form>
+      
+      </div>
+    </div>
+
+    <div class="item4">
+      <div class="container">
+        <header class="text-center text-light my-4">
+          <!--<h1 class="mb-4">Prioritize.</h1>
+          <form class="search">
+            <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+          </form>-->
+        </header>
+        <ul class="list-group todos mx-auto text-light">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>play mariokart</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>defeat ganon in zelda</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>make a veggie pie</span>
+            <i class="far fa-trash-alt delete"></i>
+          </li>
+        </ul>
+      <!--<form class="add text-center my-4">
+          <label class="text-light">Add a new todo...</label>
+          <input class="form-control m-auto" type="text" name="add" />
+        </form>-->
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
