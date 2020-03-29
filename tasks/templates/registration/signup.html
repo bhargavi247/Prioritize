@@ -1,15 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<style>
-    body{
-        background: #352f5b;
-        color: #F8F9FA;
-    }
-</style>
 
+{% load static %}
+<link rel="stylesheet" href="{% static 'tasks/styles.css' %} ">
 <div class =" justify-content-center align-items-center">  
-<h2>Sign up</h2>
-  <form method="post">
+<h1>Sign up</h1>
+  <form method="post" class = "tcolor">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Sign up</button>

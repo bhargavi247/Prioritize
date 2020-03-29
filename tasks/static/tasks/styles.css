@@ -1,13 +1,25 @@
 body{
     background: #352f5b;
 }
-h1{
+h1,p{
+    color:white;
+}
+.tcolor{
     color:white;
 }
 .container{
     max-width: 400px;
 }
+
 input[type=text],
+input[type=password]{
+    margin-left: 15px;
+}
+
+input[type=text],
+button[type=submit],
+input[type=password],
+input[type=submit],
 input[type=text]:focus{
     color: #fff;
     border: none;
