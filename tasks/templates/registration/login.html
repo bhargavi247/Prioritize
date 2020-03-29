@@ -1,4 +1,15 @@
-<html>
+{% extends  "base.html" %}
+
+{% block content %}
+
+<style>
+    body{
+        background: #352f5b;
+        color: #F8F9FA;
+    }
+</style>
+
+<div class =" justify-content-center align-items-center">  
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
@@ -32,4 +43,5 @@
 {# Assumes you setup the password_reset view in your URLconf #}
 <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 <p><a href="{% url 'signup' %}">Sign Up</a></p>
-</html>
+</div>
+{% endblock %}

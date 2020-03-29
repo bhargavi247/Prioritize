@@ -1,4 +1,15 @@
-<html>
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body{
+        background: #352f5b;
+        color: #F8F9FA;
+    }
+</style>
+
+<div class =" justify-content-center align-items-center">  
   <p>Logged out!</p>  
-  <a href="{% url 'login'%}">Click here to login again.</a>
-</html>
+  <a href="{% url 'login' %}">Click here to login again.</a>
+</div>
+{% endblock %}

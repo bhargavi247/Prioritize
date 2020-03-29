@@ -23,8 +23,7 @@ post format should be
 def index(request):
     if (request.method == "GET"):
         todo_list = Todo.objects.filter(user = request.user)
-        output = "this is tasks and the user authenticated is " + str(request.user.id)+ "<br>" + ", ".join([element.todo_task for element in todo_list])
-        return HttpResponse(output)
+        return render(request,'tasks/index.html')
         #this should be render html from next time in templates
     elif(request.method == "POST"):
         for todo in request.POST:
@@ -52,3 +51,4 @@ def signup(request):
         return render(request = request,
                   template_name = "registration/signup.html",
                   context={"form":form})
+

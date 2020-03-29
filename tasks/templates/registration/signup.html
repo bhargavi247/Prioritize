@@ -1,8 +1,18 @@
-<html>
+{% extends "base.html" %}
+{% block content %}
+<style>
+    body{
+        background: #352f5b;
+        color: #F8F9FA;
+    }
+</style>
+
+<div class =" justify-content-center align-items-center">  
 <h2>Sign up</h2>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Sign up</button>
   </form>
-<html>
+</div>
+{% endblock %}
