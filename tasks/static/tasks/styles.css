@@ -26,9 +26,27 @@ input[type=text]:focus{
     background: rgba(0, 0, 0, 0.2);
     max-width: 400px;
 }
-.todos li{
+.todos1 li{
     background:#423a6f;
 }
+
+.todos2 li{
+    background:#423a6f;
+    text-align: left;
+}
+
 .delete {
     cursor: pointer;
+}
+
+.important{
+    cursor: pointer;
+}
+
+.urgent{
+    cursor: pointer;
+}
+
+.filtered{
+    display:none !important;
 }
